@@ -31,7 +31,7 @@ export default function useWindowDimensions():
         dimensions.scale !== window.scale ||
         dimensions.fontScale !== window.fontScale
       ) {
-        setDimensions(window);
+        setDimensions({...window});
       }
     }
     const subscription = Dimensions.addEventListener('change', handleChange);
